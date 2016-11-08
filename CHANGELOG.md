@@ -1,5 +1,49 @@
 # Jobs plugin change log summary
 
+## 2.12.0
+* Support for Mojang UUID (converts to new database table format)
+* Added async support for economy plugins
+
+## 2.11.4
+* Bugfix CraftItemEvent for invalid crafting events
+* Updated translations (fr)
+* Added new translations (et, cs)
+
+## 2.11.3
+* Added translations (it, ko)
+* Updated translations (de)
+* When using add-xp-player, added workaround to give player fraction of xp points (use dicerolls) when dealing with non-whole numbers
+* Refactored inventory listeners for 1.5.2-R1.0
+
+## 2.11.2
+* Added translations (pt, no)
+* Fixed output of special characters in multiple translations
+* Permissions are only applied in worlds where players have world permission (jobs.world.WORLD_NAME)
+* Minor change to how permissions are applied have it behave more like 2.10.2 (however, positive still wins over negative)
+
+## 2.11.1
+* Fixed experience per level and titles which were incorrectly being calculated under certain circumstances
+* Added translations (pl, zh)
+
+## 2.11.0
+* Finished modularizing code (ready for Spout and Bukkit API ports!)
+* Added /jobs help command
+* Added description field in jobConfig.yml that shows up in /jobs browse command
+* Fixed ordering of permissions, "true" will always win over "false" now.
+* Made Vault completely optional, will use "blackhole" economy if Vault is missing
+* Added multiple translations (es, fr, jp, ru)
+
+## 2.10.2
+* Fixed /jobs reload command
+* Faster permission handling
+* Added configuration toggle to allow for adding Jobs xp to player's minecraft XP bar
+* Slightly modified /jobs info to make it easier to read
+* Added better error handling for some configuration mishaps
+
+## 2.10.1
+* Fixed error when using player-only commands in console
+* Fixed player notices in some admin commands
+
 ## 2.10.0
 * Added full i18n support, removed messageConfig.yml (you may delete this file from your plugins folder)
 * Modified payment handling to retry withdrawals if there is insufficient funding
